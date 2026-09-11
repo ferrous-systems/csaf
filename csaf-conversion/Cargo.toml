@@ -1,0 +1,19 @@
+[package]
+name = "csaf-conversion"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords.workspace = true
+readme.workspace = true
+
+[dependencies]
+csaf-schema = { path = "../csaf-schema" }
+clap = { workspace = true, optional = true }
+
+[features]
+cli = ["dep:clap"]
+
+[lints]
+workspace = true

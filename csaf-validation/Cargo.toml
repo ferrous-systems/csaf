@@ -1,0 +1,22 @@
+[package]
+name = "csaf-validation"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords.workspace = true
+readme.workspace = true
+
+[dependencies]
+csaf-schema = { path = "../csaf-schema", default-features = false }
+clap = { workspace = true, optional = true }
+
+[features]
+default = ["csaf2_0", "csaf2_1"]
+csaf2_0 = ["csaf-schema/csaf2_0"]
+csaf2_1 = ["csaf-schema/csaf2_1"]
+cli = ["dep:clap"]
+
+[lints]
+workspace = true

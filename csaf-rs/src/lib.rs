@@ -1,25 +1,20 @@
-#[cfg(feature = "converter")]
-pub mod converter;
-pub mod csaf;
-pub mod csaf2_0;
-pub mod csaf2_1;
-pub mod csaf_traits;
-pub(crate) mod cvss;
-pub mod helpers;
-pub mod json;
-pub(crate) mod macros;
-pub mod schema;
-#[cfg(test)]
-pub mod test_result_comparison;
-#[cfg(test)]
-pub mod test_structure;
-pub mod test_validation;
-pub mod validation;
-pub mod validation_result;
-pub mod validations;
+pub use csaf_schema as schema;
+pub use csaf_validation as validation;
 
-/// The CVSS metric types returned by `ContentTrait`'s typed accessors
-/// (`get_cvss_v2_typed`, `get_cvss_v3_typed`, `get_cvss_v4_typed`).
-pub use cvss_rs;
-/// The SSVC selection types returned by `ContentTrait::get_ssvc_v2`.
-pub use ssvc;
+#[cfg(feature = "conversion")]
+pub use csaf_conversion as conversion;
+
+#[derive(Debug, Clone, clap::Parser)]
+pub enum Cmd {
+    Validate(validation::ValidationArgs),
+    #[cfg(feature = "conversion")]
+    Convert(conversion::ConversionArgs),
+}
+
+pub fn run(cmd: Cmd) {
+    match cmd {
+        Cmd::Validate(validation_args) => validation::validate(validation_args),
+        #[cfg(feature = "conversion")]
+        Cmd::Convert(conversion_args) => conversion::convert(conversion_args),
+    }
+}

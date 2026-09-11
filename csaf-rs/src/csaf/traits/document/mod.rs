@@ -1,9 +1,0 @@
-pub mod aggregate_severity_trait;
-pub mod distribution_trait;
-pub mod engine_trait;
-pub mod generator_trait;
-pub mod publisher_trait;
-pub mod revision_trait;
-pub mod sharing_group_trait;
-pub mod tlp_trait;
-pub mod tracking_trait;

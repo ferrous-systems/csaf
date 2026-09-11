@@ -1,5 +1,11 @@
 [workspace]
-members = ["csaf-validator", "csaf-rs", "type-generator", "csaf-converter", "csaf-ffi", "csaf-result-json"]
+members = [
+    "csaf-rs",
+    "csaf-ffi",
+    "csaf-schema",
+    "csaf-validation",
+    "csaf-conversion",
+]
 resolver = "2"
 
 [workspace.package]
@@ -18,3 +24,6 @@ implicit_clone = "deny"
 redundant_clone = "deny"
 zero_sized_map_values = "deny"
 explicit_iter_loop = "deny"
+
+[workspace.dependencies]
+clap = { version = "4.6.6", features = ["derive"] }
