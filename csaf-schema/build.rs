@@ -6,10 +6,12 @@ fn main() {
     let out_dir = env::var("OUT_DIR").unwrap();
     let out_path = Path::new(&out_dir).join(GENERATED_FOLDER_NAME);
 
-    println!("cargo:rerun-if-changed=../csaf"); // csaf submodule
+    println!("cargo:rerun-if-changed=schema-links/csaf2_1.json"); // csaf schema for v2.1
 
     let dir = env!("CARGO_MANIFEST_DIR");
     let bundled_path = Path::new(dir).join(GENERATED_FOLDER_NAME);
+
+    let _schema2_1 = std::fs::read_to_string("schema-links/csaf2_1.json").unwrap();
 
     // TODO:
     // 1. Generate code using 'out_path' as initial target
