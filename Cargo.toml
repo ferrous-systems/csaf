@@ -2,7 +2,7 @@
 members = [
     "csaf-rs",
     "csaf-ffi",
-    "csaf-schema",
+    "csaf-schemas",
     "csaf-validation",
     "csaf-conversion",
 ]

@@ -1,4 +1,4 @@
-pub use csaf_schema as schema;
+pub use csaf_schemas as schemas;
 pub use csaf_validation as validation;
 
 #[cfg(feature = "conversion")]

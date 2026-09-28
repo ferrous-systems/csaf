@@ -9,7 +9,7 @@ keywords.workspace = true
 readme.workspace = true
 
 [dependencies]
-csaf-schema = { path = "../csaf-schema" } # contains base types, so always needed
+csaf-schemas = { path = "../csaf-schemas" } # contains base types, so always needed
 csaf-validation = { path = "../csaf-validation", features = [
     "cli",
 ] } # contains semantic validation, so should be needed most of the times

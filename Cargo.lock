@@ -216,7 +216,7 @@ name = "csaf-conversion"
 version = "0.5.1"
 dependencies = [
  "clap",
- "csaf-schema",
+ "csaf-schemas",
 ]
 
 [[package]]
@@ -235,12 +235,12 @@ version = "0.5.1"
 dependencies = [
  "clap",
  "csaf-conversion",
- "csaf-schema",
+ "csaf-schemas",
  "csaf-validation",
 ]
 
 [[package]]
-name = "csaf-schema"
+name = "csaf-schemas"
 version = "0.5.1"
 
 [[package]]
@@ -248,7 +248,7 @@ name = "csaf-validation"
 version = "0.5.1"
 dependencies = [
  "clap",
- "csaf-schema",
+ "csaf-schemas",
 ]
 
 [[package]]

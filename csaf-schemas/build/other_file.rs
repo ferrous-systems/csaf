@@ -12,6 +12,6 @@ pub fn build_rs() {
     )
     .unwrap();
 
-    // To execute the build script, run `cargo build -p csaf-schema`
-    // Note: The created file will be located somewhere under `target/debug/build/csaf-schema-<some hash>/out/schema-build-dir/build_out_file.txt`
+    // To execute the build script, run `cargo build -p csaf-schemas`
+    // Note: The created file will be located somewhere under `target/debug/build/csaf-schemas-<some hash>/out/schema-build-dir/build_out_file.txt`
 }

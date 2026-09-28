@@ -9,7 +9,7 @@ keywords.workspace = true
 readme.workspace = true
 
 [dependencies]
-csaf-schema = { path = "../csaf-schema" }
+csaf-schemas = { path = "../csaf-schemas" }
 clap = { workspace = true, optional = true }
 
 [features]
